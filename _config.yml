@@ -81,10 +81,6 @@ google_plus_one_size: medium
 googleplus_user: 100267287563351211575
 googleplus_hidden: false
 
-# Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
-
 # Google Analytics
 google_analytics_tracking_id:
 
