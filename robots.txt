@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://minejo.github.io/sitemap.xml 
