@@ -1,0 +1,655 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Jonathan's Blog</title>
+	<meta name="author" content="jonathan">
+
+	
+	<meta name="description" content="Oct 10th, 2013 无线共享 Comments ArchLinux中用Hostapd创建热点给手机使用 折腾了一天，终于把linux的无线共享搞定了，之前总是搞不定是因为hostapd2.0和NetworkManager冲突了，吐嘈无力，
+好不容易从gnome切换到kde， &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Jonathan's Blog" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://minejo.github.io/blog/page/3/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("jonathan.swjtu@gmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+</div>
+<hgroup>
+  <h1><a href="/">Jonathan's Blog</a></h1>
+  
+    <h2>Take the Time to Create the Timeless.</h2>
+    
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/wiki/index.html">Wiki</a></li>  
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+			<a class="email" href="mailto:jonathan.swjtu@gmail.com" title="Email">Email</a>
+		
+		
+			<a class="facebook" href="http://www.facebook.com/jonathan.li.77736" title="Facebook">Facebook</a>
+		
+		
+			<a class="google" href="https://plus.google.com/100267287563351211575" rel="author" title="Google+">Google+</a>
+		
+		
+			<a class="twitter" href="http://twitter.com/jonathan__lc" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/minejo" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-10T11:32:00+08:00" data-updated="true" itemprop="datePublished">Oct 10<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/wu-xian-gong-xiang/'>无线共享</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong/" itemprop="url">ArchLinux中用Hostapd创建热点给手机使用</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>折腾了一天，终于把linux的无线共享搞定了，之前总是搞不定是因为hostapd2.0和NetworkManager冲突了，吐嘈无力，
+好不容易从gnome切换到kde，安享NM还没多长时间，没想到又出事了，罢了，只有卸载了NetworkManager了，以后上网就准备转向netctl了。</p>
+
+<p>废话不多说了，开始主题。</p>
+
+<h2>Step1</h2>
+
+<p>首先要确保笔记本支持AP，用<code>iw list</code>查看，若有AP Support即可。</p>
+
+<h2>Step2</h2>
+
+<p>安装hostapd（<code>sudo pacman -S hostapd</code>),先备份<code>hostapd.conf</code>:</p>
+
+<p><code>sudo mv /etc/hostapd/hostapd.conf /etc/hostapd/hostapd.conf.bak</code></p>
+
+<p>然后创建<code>hostapd.conf</code>文件如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>interface=wlp5s0 #你的网线网卡端口，一般是wlan0
+</span><span class='line'>driver=nl80211
+</span><span class='line'>ssid=1984  #无线网名称
+</span><span class='line'>channel=5
+</span><span class='line'>hw_mode=g
+</span><span class='line'>ieee80211n=1
+</span><span class='line'>ignore_broadcast_ssid=0
+</span><span class='line'>auth_algs=1
+</span><span class='line'>wpa=2
+</span><span class='line'>wpa_passphrase=xxxxxxxx #无线网密码
+</span><span class='line'>wpa_key_mgmt=WPA-PSK
+</span><span class='line'>wpa_pairwise=TKIP
+</span><span class='line'>rsn_pairwise=CCMP</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-08T20:46:00+08:00" data-updated="true" itemprop="datePublished">Oct 8<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/life/'>life</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde/" itemprop="url">弃用gnome转向KDE</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>用了好久的gnome，今天终于受不了了，arch里的gnome阉割了ibus功能，但是gnome又依赖ibus，于是就有了各种蛋疼的问题，比如Qt，GTK等程序经常用不了fcitx输入法，即使重定义的im方法都没用，而且NetworkManager也有问题，每次上网都要先手动开网卡，而后手动开无线或拨号，好麻烦，忍无可忍终于切换到KDE了，先<code>sudo pacman -S kde</code>,然后<code>sudo pacman -Rdd gnome</code>就搞定了，就目前的体验来看，kde还挺让我满意的，听说偶尔会有内存泄露的情形，但我估计我运气应该不会那么差吧。</p>
+
+<p>用kde的感觉和window没啥区别，习惯度好一点，gnome的状态栏有点恶心，kde的就很好，自定义度也高。</p>
+
+<p>哈，先使用一段时间吧，希望不会失望，话说好久没用linux了，当然也就好久没写blog了。</p>
+
+<p>以后还是尽量用arch吧，window什么的暂时不管了，基本不会用到了，除非玩游戏了。</p>
+
+<p>另外，开始要练练latex写论文了。</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-08T19:12:00+08:00" data-updated="true" itemprop="datePublished">Oct 8<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/luan-ma/'>乱码</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti/" itemprop="url">使用Mutagen解决mp3文件名乱码问题</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>很多在window上显示正常的mp3到了linux下文件名就乱码了，非常烦人，这无非是mp3标签的编码格式不对。</p>
+
+<p>解决方法之一就是用<code>mutagen</code>来修改mp3文件的标签信息。</p>
+
+<h2>安装mutagen</h2>
+
+<p>在arch中安装<code>mutagen</code>最方便了，直接<code>sudo pacman -S mutagen</code>即可。
+其他发行版的安装类似吧。</p>
+
+<h2>转换整个目录的mp3标签</h2>
+
+<p>此处以GBK/GB18030为例，转换当前目录下的所有mp3（包括子目录）：</p>
+
+<p><code>find . -iname "*.mp3" -execdir mid3iconv -e gbk {}\;</code></p>
+
+<p>这样就搞定了。</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-26T17:23:00+08:00" data-updated="true" itemprop="datePublished">Sep 26<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/vim/'>vim</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she/" itemprop="url">修改VIM ESC键的映射</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>用了这么长时间的vim，发现每次把手挪动那么远去按个esc键非常麻烦，于是就想把esc键位映射成比怎么用的Caps Lock键，而且还比较靠近。</p>
+
+<p>网上查了一下，由于Caps Lock键位是辅助键位，要配合其他键才能有响应，在vim里面用map映射的话貌似有点问题，于是有人想到了在X里面修改。</p>
+
+<p>很简单，在<code>.xprofile</code>里面加上一句：<code>xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'</code>即可，然后<code>source</code>一下<code>.xprofile</code>就可以看到效果了。</p>
+
+<p>同时为了弥补下Cap键消失的影响，可以加个快捷键，用于vim快速将单词变成大写。</p>
+
+<p>在<code>.vimrc</code>中加入一下映射即可。
+<code>inoremap &lt;C-u&gt; &lt;esc&gt;gUiwea</code></p>
+
+<p>引用：</p>
+
+<pre><code>http://blog.csdn.net/lalor/article/details/7437258
+</code></pre>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-23T16:39:00+08:00" data-updated="true" itemprop="datePublished">Sep 23<span>rd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/life/'>life</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/" itemprop="url">论大四我可以干些什么</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>保研的事经过这些天的忙碌终于定下来了，专硕，其实我不读博的话和学硕是没啥差别的，所以也不怎么在意。</p>
+
+<p>不知不觉开学快一个月了，感觉这一个月啥事都没有做，没有心思去做，反倒没有假期在家学习Linux时的那份逍遥，倒是陪室友LOL的不少。</p>
+
+<p>也罢，从现在起认真规划下吧。</p>
+
+<h2>专业方向</h2>
+
+<h3>专业基础知识</h3>
+
+<p>既然选择了读研，那专业的知识必须是要补一补的，说实话，我前几年的专业知识学得并不怎么样，部分基础概念还是不清楚，有必要重新看下专业书。</p>
+
+
+		
+		<a href="/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-06T23:41:00+08:00" data-updated="true" itemprop="datePublished">Sep 6<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/life/'>life</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/09/06/bao-yan-zhi-shi-chen-ai-luo-ji-xu-nu-li/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/09/06/bao-yan-zhi-shi-chen-ai-luo-ji-xu-nu-li/" itemprop="url">保研之事尘埃落，继续努力</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>今天是个特殊的日子，so需要mark一下。</p>
+
+<h4>去了趟校医院，屁股挨了一针</h4>
+
+<p>玫瑰糠疹终于还是把我搞的痒的睡不着了，忍无可忍的我只有去看doctor了，结果去校医院，又和往常一样，屁股挨针了，明后天还要去。</p>
+
+<p>不过今天给我打针的医生明显技术不一样啊，几分钟就不疼了，上次那个医生打针疼了我一天。</p>
+
+<h3>接的那个小项目终于写完了，虽然功能简单，做完善还是不容易啊</h3>
+
+<p>花了一天的时间把那个项目改好了，本来Linux里面各种配source没有问题，结果到了window下后才发现ffplay在window下的那个版本各种bug，一运行就死机，吐嘈无力了，又没有时间去手动编译，而且还不一定有用。最后一怒之后在window后用potplayer替代ffplay了，直接把potplayer整个硬盘版目录放到项目里了，用java直接调用，效果比ffplay好多了哟，我到现在都佩服当初想到的解决方案233333.</p>
+
+
+		
+		<a href="/blog/2013/09/06/bao-yan-zhi-shi-chen-ai-luo-ji-xu-nu-li/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-01T15:32:00+08:00" data-updated="true" itemprop="datePublished">Sep 1<span>st</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/vimwiki/'>vimwiki</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/09/01/vimwikishu-ru-te-shu-%24de-jie-jue-fang-an/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/09/01/vimwikishu-ru-te-shu-%24de-jie-jue-fang-an/" itemprop="url">Vimwiki输入特殊字符$的解决方案</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>在vimwiki中由于$是特殊字符，用于Math表达式的时候使用，转换成html后显示不出来，解决方案就是改源码，开源就是好。</p>
+
+<p>要改的文件是vimwiki安装路径的<code>html.vim</code>,我的路径是<code>.vim/bundle/vimwiki/html.vim</code>,将$相关的那一句改一下即可。</p>
+
+<p>Change:
+  <code>return '\('.s:mid(a:value, 1).'\)'</code></p>
+
+<p>  To:
+   <code>return '$'.s:mid(a:value, 1).'$'</code></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-23T22:18:00+08:00" data-updated="true" itemprop="datePublished">Aug 23<span>rd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/reading/'>reading</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/08/23/Reading-ping-fan-de-shi-jie-biji/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/08/23/Reading-ping-fan-de-shi-jie-biji/" itemprop="url">《平凡的世界》读书笔记</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<hr />
+
+<p>平凡的世界 (路遥)</p>
+
+<ul>
+<li>我的标注 位置761-764 | 已添加至 2013年8月20日 星期二 8:38:53</li>
+</ul>
+
+
+<p>玉厚看玉亭这样没出息，才知道他半辈子辛劳，企图给孙家造就一个光宗耀祖人物的指望落空了。但他心平气静，并不为此而过分地懊悔。是啊，这是命运。正如辛劳一年营务的庄稼，还没等收获，就被冰雹打光了，难道能懊悔自己曾经付出的力气吗？</p>
+
+<hr />
+
+<ul>
+<li>我的标注 位置1822-1824 | 已添加至 2013年8月20日 星期二 23:13:54</li>
+</ul>
+
+
+<p>他现在心里多么苦闷！尽管严格地说来，也许这不能称之谓失恋。但感情上的这种慰藉一旦再不存在，就会给人的心中带来多少烦恼。这是青春的烦恼。我们不妨想一想伟人歌德和他少年时代的化身维特。在这一方面，贵族和平民大概都是一样的。</p>
+
+<hr />
+
+<ul>
+<li>我的标注 位置2022-2027 | 已添加至 2013年8月20日 星期二 23:29:36</li>
+</ul>
+
+
+<p>现在认识到，他是一个普普通通的人，应该按照普通人的条件正正常常的生活，而不要做太多的非分之想。当然，普通并不等于庸俗。他也许一辈子就是个普通人，但他要做一个不平庸的人。在许许多多平平常常的事情中，应该表现出不平常的看法和做法来。比如，象顾养民这家伙，挨了别人的打，但不报复打他的人——尽管按常情来说，谁挨了打也不会平平静静，但人家的做法就和一般人不一样。这件事就值得他好好思量思量。这期间，少平获得了一个非常重要的认识：在最平常的事情中都可以显示出一个人人格的伟大来！</p>
+
+<hr />
+
+
+		
+		<a href="/blog/2013/08/23/Reading-ping-fan-de-shi-jie-biji/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-18T19:18:00+08:00" data-updated="true" itemprop="datePublished">Aug 18<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/java/'>java</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/08/18/javadiao-yong-ffplaywan-cheng-shi-pin-bo-fang/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/08/18/javadiao-yong-ffplaywan-cheng-shi-pin-bo-fang/" itemprop="url">Java调用ffplay完成视频播放</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>这几天在帮别人写一个项目展示程序，用Java写的，其中有个视频展示，让我很是纠结，之前没用java做过视频播放，看了下java的jmf，但是局限性太大了，而且只支持那个几种格式，最后决定使用开源ffmpeg的缩小版播放器ffplay完成视频播放。</p>
+
+<p>关于Java调用外部程序，使用的是processBuilder来初始化，然后再定义一个process来获得结果。</p>
+
+<p>代码如下：
+File /home/li/Blog/source/downloads/code/Callffplay.java could not be found</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-17T22:04:00+08:00" data-updated="true" itemprop="datePublished">Aug 17<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/vimwiki/'>vimwiki</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/" itemprop="url">修改Octopress主题fabric为Vimwiki站点模板</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p> 整Vimwiki的模板也有2-3天了，先是自己DIY，然后用bootstrap来DIY，但总是达不到我要的效果，唉，我果然是没有做UI的天赋啊。</p>
+
+<p> 无奈之下，只好求助于开源模板，恰好想顺便换下Octopress主题，于是就开始找Octopress的开源主题，找了好久终于发现了一个好看又简洁的模板<a href="http://panks.me/blog/2013/01/new-octopress-theme-fabric/">fabric</a>,Octopress主题的安装我就不说了，直接开始修改wiki模板吧。</p>
+
+<p> 由于wiki是用来做个人笔记用的，所以砍掉了很多没必要的JS，把Social和搜索也去掉了.</p>
+
+<p> 效果图如下：
+ <img src="/images/sample.png" title="Sample" alt="Alt sample" /></p>
+
+<p> 我修改后的template如下：
+ File /home/li/Blog/source/downloads/code/template.html could not be found</p>
+
+
+		
+		<a href="/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/blog/page/2/" class="prev">Previous</a>
+    
+    
+        <a href="/blog/page/4/" class="next">Next</a>
+    
+</nav>
+</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2014
+
+    jonathan
+
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+		</div>
+	</div>
+</body>
+</html>
