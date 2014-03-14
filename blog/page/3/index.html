@@ -9,8 +9,7 @@
 	<meta name="author" content="jonathan">
 
 	
-	<meta name="description" content="Oct 10th, 2013 无线共享 Comments ArchLinux中用Hostapd创建热点给手机使用 折腾了一天，终于把linux的无线共享搞定了，之前总是搞不定是因为hostapd2.0和NetworkManager冲突了，吐嘈无力，
-好不容易从gnome切换到kde， &hellip;">
+	<meta name="description" content="Oct 10th, 2013 linux, octopress Comments 重新部署octopress 今天不小心手贱把博客目录给删了，没办法只好去github重新clone了一遍，结果配置了几次都不对，最后还是网上搜了一下才搞对的，看来我对git的用法还不是很了解啊。 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -129,6 +128,57 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-10T15:27:00+08:00" data-updated="true" itemprop="datePublished">Oct 10<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/10/10/zhong-xin-bu-shu-octopress/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/10/10/zhong-xin-bu-shu-octopress/" itemprop="url">重新部署octopress</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>今天不小心手贱把博客目录给删了，没办法只好去github重新clone了一遍，结果配置了几次都不对，最后还是网上搜了一下才搞对的，看来我对git的用法还不是很了解啊。</p>
+
+<p>重新配置时的基本操作我就不说，我这篇文章里有<a href="http://minejo.github.io/blog/2013/08/09/shi-yong-github-plus-octopresszuo-blog/">使用Github+Octopress做Blog</a>,重新配置只要把github上的那个代码clone下来即可。</p>
+
+<h2>第一步：clone source分支</h2>
+
+<p><code>git clone -b source git@github.com:minejo/minejo.github.io.git</code></p>
+
+<h2>第二步：clone master分支</h2>
+
+<p><code>cd minejo.github.io #进入source分支</code></p>
+
+<p><code>git clone -b master git@github.com:minejo/minejo.github.io.git _deploy</code></p>
+
+<p>ok了，虽然很简单，但还是花了我不少时间，mark一下。</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -607,54 +657,6 @@ File /home/li/Blog/source/downloads/code/Callffplay.java could not be found</p>
 
 		
 		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-17T22:04:00+08:00" data-updated="true" itemprop="datePublished">Aug 17<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/vimwiki/'>vimwiki</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/" itemprop="url">修改Octopress主题fabric为Vimwiki站点模板</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p> 整Vimwiki的模板也有2-3天了，先是自己DIY，然后用bootstrap来DIY，但总是达不到我要的效果，唉，我果然是没有做UI的天赋啊。</p>
-
-<p> 无奈之下，只好求助于开源模板，恰好想顺便换下Octopress主题，于是就开始找Octopress的开源主题，找了好久终于发现了一个好看又简洁的模板<a href="http://panks.me/blog/2013/01/new-octopress-theme-fabric/">fabric</a>,Octopress主题的安装我就不说了，直接开始修改wiki模板吧。</p>
-
-<p> 由于wiki是用来做个人笔记用的，所以砍掉了很多没必要的JS，把Social和搜索也去掉了.</p>
-
-<p> 效果图如下：
- <img src="/images/sample.png" title="Sample" alt="Alt sample" /></p>
-
-<p> 我修改后的template如下：
- File /home/li/Blog/source/downloads/code/template.html could not be found</p>
-
-
-		
-		<a href="/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/" class="more-link">Read on &rarr;</a>
 	</div>
 
 </article>
