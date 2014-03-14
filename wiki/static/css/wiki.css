@@ -87,3 +87,13 @@
    width: 260px;
    
 }
+
+body
+{
+    padding-bottom: 15px;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
