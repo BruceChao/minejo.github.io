@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>capwap</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan's wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="diary/diary.html">日记</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_0.1">Related</a>
+<ul>
+<li><a href="#toc_0.1.1">LWAPP</a>
+<li><a href="#toc_0.1.2">SLAPP</a>
+</ul>
+<li><a href="#toc_0.2">online resource</a>
+</ul>
+</ul>
+</div>
+<h2 id="toc_0.1">Related</h2>
+<h3 id="toc_0.1.1">LWAPP</h3>
+<p>
+Lightweight Access Point Protocol
+</p>
+
+<p>
+<img src="http://www.cs.wustl.edu/~jain/cse574-10/ftp/capwap/fig5.jpg" alt="cool" style="width:400px;height:380px;" />
+</p>
+
+<p>
+LWAPP defines the state machine that governs both the AP and the controller's communication with each other. The basic functionality that is encapsulated within this protocol is as follows.
+</p>
+
+<ol>
+<li>
+Discovery - New APs must seek out a controller with which to associate. This is accomplished by the AP broadcasting a Discovery Request. A controller must respond with a Discovery Response. The AP then joins to a controller, and is acknowledged by the controller.
+
+<li>
+Image Download - The newly joined AP then may request a firmware update, upon seeing the controller advertise a higher version of code. The AP then downloads the firmware, and once completed, enters the Reset state, and then attempts to rejoin a controller.
+
+<li>
+Configure - An AP with a sufficient version of code may then request to be configured by the controller. The AP sends the controller its current configuration, and the controller responds with an updated configuration. Once the AP has received the configuration, it may enter the Run state.
+
+<li>
+Run - Both the controller and AP operate in the Run state. The AP forwards packets to the controller, and maintains normal operation. From the Run state, an AP and controller may exchange new key material, by entering the Key Update state. This state updates the encryption keys on both devices, which is used to encrypt all further messages, until a new key is requested.
+
+</ol>
+<h3 id="toc_0.1.2">SLAPP</h3>
+<p>
+Secure Light Access Point Protocol
+</p>
+
+<p>
+<img src="http://www.cs.wustl.edu/~jain/cse574-10/ftp/capwap/fig6.jpg" />
+</p>
+
+<p>
+SLAPP operates as the framework to make a connection between two devices, and negotiate a protocol. The same SLAPP protocol would be used by an AP to decide how to download updated firmware, as would be used to determine a protocol to communicate with the controller. The state machine in [fig6] show the 4 states attainable during protocol negotiation by a device. [RFC5413]
+</p>
+
+<ol>
+<li>
+Discovery - Discovery is the initial broadcast from an AP, informing controllers that they are interested in communicating in a specific protocol. The controller awaits a Discovery Request from an AP. Once received, the controller moves to the Acquiring phase without responding yet.The AP broadcasts a Discovery Request, and upon reception of the response, moves to the Acquiring phase as well.
+
+<li>
+Acquiring - This state represents both devices connecting to each other, to begin encrypting their communications. The controller processes the Discovery Request, and if valid, responds in the positive, and moves to Securing. Otherwise it moves back to the Discovery state. The AP transitions to the Securing phase when a "client hello" message has been received. This marks the beginning of a DTLS conversation, or Datagram Transport Layer Security [RFC4347]. If a timer expires while the AP is in the Acquiring phase before receiving a "client hello", the AP goes back to Discovery mode.
+
+<li>
+Securing - This phase establishes an encrypted tunnel, over which a protocol can be agreed upon. The controller transmits a "client end" message, to signify the termination of the DTLS exchange. The controller then moves into the Negotiated Control Protocol state. The AP reciprocates the DTLS connection, and when finished, transmits the "server end" message. When the DTLS exchange is completed, the AP moves to Negotiated Control Protocol.
+
+<li>
+Negotiated Control Protocol - Here both devices begin communicating in the previously agreed-upon protocol. This protocol can be anything, as long as both sides agreed on it.
+
+</ol>
+<h2 id="toc_0.2">online resource</h2>
+<ul>
+<li>
+<a href="https://tools.ietf.org/html/rfc5415">IETF RFC5415</a>
+
+<li>
+<a href="http://www.cs.wustl.edu/~jain/cse574-10/ftp/capwap/index.html">Current Status and Overview of the CAPWAP Protocol</a>
+
+</ul>
+
+</div>
+</body>
+</html>
