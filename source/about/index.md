@@ -22,6 +22,6 @@ footer: false
 
 * 记录一些技术上的感悟
 * record life
-* 放Kindle的读书笔记
+* <del>放Kindle的读书笔记</del>读书笔记改放到Wiki
 * 挂个人wiki
 * 通过写blog来鞭策自己
