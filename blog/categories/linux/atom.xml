@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Jonathan's Blog]]></title>
   <link href="http://minejo.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://minejo.github.io/"/>
-  <updated>2014-04-09T09:52:14+00:00</updated>
+  <updated>2014-04-14T22:35:28+08:00</updated>
   <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[jonathan]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[通过8个技巧让你成为一个超强的Linux终端用户]]></title>
     <link href="http://minejo.github.io/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks/"/>
-    <updated>2014-02-28T16:52:00+00:00</updated>
+    <updated>2014-02-28T16:52:00+08:00</updated>
     <id>http://minejo.github.io/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks</id>
     <content type="html"><![CDATA[<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/bash-tricks-header.png" alt="ternimal" /></p>
 
@@ -119,7 +119,7 @@
   <entry>
     <title type="html"><![CDATA[如何在Linux上提高文本文件的搜索效率]]></title>
     <link href="http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently/"/>
-    <updated>2014-02-26T00:00:00+00:00</updated>
+    <updated>2014-02-26T00:00:00+08:00</updated>
     <id>http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently</id>
     <content type="html"><![CDATA[<p>对于系统管理员或程序员来说，当需要在复杂配置的目录中或者在大型源码树中搜寻特定的文本或模式时，grep类型的工具大概是最受欢迎的。</p>
 
@@ -224,7 +224,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[使用kindle笔记来做fortune名言后的玩法]]></title>
     <link href="http://minejo.github.io/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan/"/>
-    <updated>2014-02-18T14:48:00+00:00</updated>
+    <updated>2014-02-18T14:48:00+08:00</updated>
     <id>http://minejo.github.io/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan</id>
     <content type="html"><![CDATA[<p>kde桌面上有一个fortune插件，可随机显示名言名句，但是默认的都是英文的名句，看了没什么意思，于是我想到用我在kindle上的笔记来做名言显示给自己看，多有意义，又能经常温习之前读过的好书。</p>
 
@@ -373,7 +373,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[我最喜欢的Linux应用]]></title>
     <link href="http://minejo.github.io/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong/"/>
-    <updated>2014-02-16T20:25:00+00:00</updated>
+    <updated>2014-02-16T20:25:00+08:00</updated>
     <id>http://minejo.github.io/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong</id>
     <content type="html"><![CDATA[<ul>
 <li>发行版：Arch</li>
@@ -409,7 +409,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[解决chromium播放豆瓣fm重影问题]]></title>
     <link href="http://minejo.github.io/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti/"/>
-    <updated>2014-01-27T12:22:00+00:00</updated>
+    <updated>2014-01-27T12:22:00+08:00</updated>
     <id>http://minejo.github.io/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti</id>
     <content type="html"><![CDATA[<p>由于在linux下用惯了chroium，更新快，最适合我们这帮爱折腾的人了。但是chromium放豆瓣fm的时候flash会出问题，即歌名会重影。</p>
 

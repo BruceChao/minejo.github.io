@@ -4,7 +4,7 @@
   <title><![CDATA[Category: guitar | Jonathan's Blog]]></title>
   <link href="http://minejo.github.io/blog/categories/guitar/atom.xml" rel="self"/>
   <link href="http://minejo.github.io/"/>
-  <updated>2014-04-09T09:52:14+00:00</updated>
+  <updated>2014-04-14T22:35:28+08:00</updated>
   <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[jonathan]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[使用Gtick做吉他的节拍器]]></title>
     <link href="http://minejo.github.io/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi/"/>
-    <updated>2013-11-20T23:40:00+00:00</updated>
+    <updated>2013-11-20T23:40:00+08:00</updated>
     <id>http://minejo.github.io/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi</id>
     <content type="html"><![CDATA[<p>今天练和弦的时候突然发现节拍什么的真的不好掌握，忽快忽慢的，本来想买个现成的节拍器的，突然想起不就是打节拍吗？这么简单的功能专门买个节拍器有点不划算，于是我就是AUR中心找了下，找到了这个<code>gtick</code>,它的介绍是这样的：</p>
 

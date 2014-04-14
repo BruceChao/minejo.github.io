@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | Jonathan's Blog]]></title>
   <link href="http://minejo.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://minejo.github.io/"/>
-  <updated>2014-04-09T09:52:14+00:00</updated>
+  <updated>2014-04-14T22:35:28+08:00</updated>
   <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[jonathan]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Linux下SSH到Github]]></title>
     <link href="http://minejo.github.io/blog/2013/08/09/linuxxia-sshdao-github/"/>
-    <updated>2013-08-09T17:17:00+00:00</updated>
+    <updated>2013-08-09T17:17:00+08:00</updated>
     <id>http://minejo.github.io/blog/2013/08/09/linuxxia-sshdao-github</id>
     <content type="html"><![CDATA[<p>本来不想写这篇的，但由于之前ssh到github的时候费了好多劲，
 还是mark一下吧，作为以后的参考</p>

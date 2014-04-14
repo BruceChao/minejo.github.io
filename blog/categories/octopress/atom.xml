@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Jonathan's Blog]]></title>
   <link href="http://minejo.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://minejo.github.io/"/>
-  <updated>2014-04-09T09:52:14+00:00</updated>
+  <updated>2014-04-14T22:35:28+08:00</updated>
   <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[jonathan]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[重新部署octopress]]></title>
     <link href="http://minejo.github.io/blog/2013/10/10/zhong-xin-bu-shu-octopress/"/>
-    <updated>2013-10-10T15:27:00+00:00</updated>
+    <updated>2013-10-10T15:27:00+08:00</updated>
     <id>http://minejo.github.io/blog/2013/10/10/zhong-xin-bu-shu-octopress</id>
     <content type="html"><![CDATA[<p>今天不小心手贱把博客目录给删了，没办法只好去github重新clone了一遍，结果配置了几次都不对，最后还是网上搜了一下才搞对的，看来我对git的用法还不是很了解啊。</p>
 
@@ -39,7 +39,7 @@
   <entry>
     <title type="html"><![CDATA[修改Octopress主题fabric为Vimwiki站点模板]]></title>
     <link href="http://minejo.github.io/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/"/>
-    <updated>2013-08-17T22:04:00+00:00</updated>
+    <updated>2013-08-17T22:04:00+08:00</updated>
     <id>http://minejo.github.io/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban</id>
     <content type="html"><![CDATA[<p> 整Vimwiki的模板也有2-3天了，先是自己DIY，然后用bootstrap来DIY，但总是达不到我要的效果，唉，我果然是没有做UI的天赋啊。</p>
 
@@ -230,7 +230,7 @@
   <entry>
     <title type="html"><![CDATA[Linux下自动提交Octopress脚本]]></title>
     <link href="http://minejo.github.io/blog/2013/08/16/linuxxia-zi-dong-ti-jiao-octopressjiao-ben/"/>
-    <updated>2013-08-16T17:55:00+00:00</updated>
+    <updated>2013-08-16T17:55:00+08:00</updated>
     <id>http://minejo.github.io/blog/2013/08/16/linuxxia-zi-dong-ti-jiao-octopressjiao-ben</id>
     <content type="html"><![CDATA[<p>用blog每次提交的时候总是好麻烦，于是就写了个脚本,
 用来自动提交源码到source分支，同时更新blog。</p>
@@ -244,7 +244,7 @@
   <entry>
     <title type="html"><![CDATA[解决ArchLinux中Octopress无法代码高亮]]></title>
     <link href="http://minejo.github.io/blog/2013/08/10/jie-jue-archlinuxzhong-octopresswu-fa-dai-ma-gao-liang/"/>
-    <updated>2013-08-10T13:06:00+00:00</updated>
+    <updated>2013-08-10T13:06:00+08:00</updated>
     <id>http://minejo.github.io/blog/2013/08/10/jie-jue-archlinuxzhong-octopresswu-fa-dai-ma-gao-liang</id>
     <content type="html"><![CDATA[<p>一开始使用octopress无法使用高亮，比如在用codeblock时一旦指定了挺定的lang就会报下面的错：
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Error </span></figcaption>
@@ -321,7 +321,7 @@
   <entry>
     <title type="html"><![CDATA[Octopress添加相册功能]]></title>
     <link href="http://minejo.github.io/blog/2013/08/09/octopresstian-jia-xiang-ce-gong-neng/"/>
-    <updated>2013-08-09T20:42:00+00:00</updated>
+    <updated>2013-08-09T20:42:00+08:00</updated>
     <id>http://minejo.github.io/blog/2013/08/09/octopresstian-jia-xiang-ce-gong-neng</id>
     <content type="html"><![CDATA[<p>给博客加个相册是个梦寐以求的功能了，之前在Wordpress上的相册功能不够满意，太臃肿了，自定义性不强，转到Octopress后发现自定义太强了，相册功能反而不知从何下手，索性今天找到了这个插件<a href="http://fancyapps.com/fancybox/#license">FancyBox</a>.</p>
 
