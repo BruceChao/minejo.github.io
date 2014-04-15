@@ -4,7 +4,7 @@
   <title><![CDATA[Jonathan's Blog]]></title>
   <link href="http://minejo.github.io/atom.xml" rel="self"/>
   <link href="http://minejo.github.io/"/>
-  <updated>2014-04-14T23:25:28+08:00</updated>
+  <updated>2014-04-15T15:53:45+00:00</updated>
   <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[jonathan]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[《遇见未知的自己》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2014/03/14/run-into-the-unkown-myself-readnote/"/>
-    <updated>2014-03-14T15:03:29+08:00</updated>
+    <updated>2014-03-14T07:03:29+00:00</updated>
     <id>http://minejo.github.io/blog/2014/03/14/run-into-the-unkown-myself-readnote</id>
     <content type="html"><![CDATA[<blockquote><p>“所以呀，记住，管好自己的事最重要。”老人提醒她，“为我们的亲人担心，其实是一种不负责任的加害行为！”</p></blockquote>
 
@@ -92,7 +92,7 @@
   <entry>
     <title type="html"><![CDATA[《没有色彩的多崎作和他的巡礼之年》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2014/03/02/colorless-tsukuru-tazaki-and-his-years-of-pilgrimage-readnote/"/>
-    <updated>2014-03-02T15:52:00+08:00</updated>
+    <updated>2014-03-02T15:52:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/03/02/colorless-tsukuru-tazaki-and-his-years-of-pilgrimage-readnote</id>
     <content type="html"><![CDATA[<blockquote><p>长相是端正的，尽管时常被人夸奖，但那也只不过是在“没什么特别破绽”范畴中。他自己看着镜子的脸时，时常会感觉到一种无可救药的乏味。</p></blockquote>
 
@@ -168,7 +168,7 @@
   <entry>
     <title type="html"><![CDATA[通过8个技巧让你成为一个超强的Linux终端用户]]></title>
     <link href="http://minejo.github.io/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks/"/>
-    <updated>2014-02-28T16:52:00+08:00</updated>
+    <updated>2014-02-28T16:52:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks</id>
     <content type="html"><![CDATA[<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/bash-tricks-header.png" alt="ternimal" /></p>
 
@@ -271,7 +271,7 @@
   <entry>
     <title type="html"><![CDATA[如何在Linux上提高文本文件的搜索效率]]></title>
     <link href="http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently/"/>
-    <updated>2014-02-26T00:00:00+08:00</updated>
+    <updated>2014-02-26T00:00:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently</id>
     <content type="html"><![CDATA[<p>对于系统管理员或程序员来说，当需要在复杂配置的目录中或者在大型源码树中搜寻特定的文本或模式时，grep类型的工具大概是最受欢迎的。</p>
 
@@ -376,7 +376,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[使用kindle笔记来做fortune名言后的玩法]]></title>
     <link href="http://minejo.github.io/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan/"/>
-    <updated>2014-02-18T14:48:00+08:00</updated>
+    <updated>2014-02-18T14:48:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan</id>
     <content type="html"><![CDATA[<p>kde桌面上有一个fortune插件，可随机显示名言名句，但是默认的都是英文的名句，看了没什么意思，于是我想到用我在kindle上的笔记来做名言显示给自己看，多有意义，又能经常温习之前读过的好书。</p>
 
@@ -477,7 +477,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[我最喜欢的Linux应用]]></title>
     <link href="http://minejo.github.io/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong/"/>
-    <updated>2014-02-16T20:25:00+08:00</updated>
+    <updated>2014-02-16T20:25:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong</id>
     <content type="html"><![CDATA[<ul>
 <li>发行版：Arch</li>
@@ -513,7 +513,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[《不安的生活》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2014/02/12/%3C%3Cbu-an-de-sheng-huo-%3E%3E-du-shu-bi-ji/"/>
-    <updated>2014-02-12T14:29:00+08:00</updated>
+    <updated>2014-02-12T14:29:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/02/12/<<bu-an-de-sheng-huo->>-du-shu-bi-ji</id>
     <content type="html"><![CDATA[<blockquote><p>在心理学上，并不是发生了坏的改变压力才增大，而是只要有改变就有压力。</p></blockquote>
 
@@ -577,7 +577,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[《看不见的城市》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2014/02/11/%3C%3Ckan-bu-jian-de-cheng-shi-%3E%3E-du-shu-bi-ji/"/>
-    <updated>2014-02-11T13:13:00+08:00</updated>
+    <updated>2014-02-11T13:13:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/02/11/<<kan-bu-jian-de-cheng-shi->>-du-shu-bi-ji</id>
     <content type="html"><![CDATA[<blockquote><p>在我很年輕的時候，有一天早晨來到這裡，街上有許多人匆匆走向市場，婦女都有好看的牙齒並且坦率望進你的眼睛，三個兵士在高台上吹響小號，輪子在周圍轉動，彩旗在風裡飄揚。</p></blockquote>
 
@@ -695,7 +695,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[解决chromium播放豆瓣fm重影问题]]></title>
     <link href="http://minejo.github.io/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti/"/>
-    <updated>2014-01-27T12:22:00+08:00</updated>
+    <updated>2014-01-27T12:22:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti</id>
     <content type="html"><![CDATA[<p>由于在linux下用惯了chroium，更新快，最适合我们这帮爱折腾的人了。但是chromium放豆瓣fm的时候flash会出问题，即歌名会重影。</p>
 
@@ -710,7 +710,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[《安娜卡列琳娜》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2014/01/21/%3C%3Can-nuo-qia-lie-lin-nuo-%3E%3E-du-shu-bi-ji/"/>
-    <updated>2014-01-21T13:09:00+08:00</updated>
+    <updated>2014-01-21T13:09:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/01/21/<<an-nuo-qia-lie-lin-nuo->>-du-shu-bi-ji</id>
     <content type="html"><![CDATA[<blockquote><p>斯捷潘·阿尔卡季奇微微一笑。他深知列文的那种感情，在他看来，世界上的少女应当分成两类：有一类——她以外的全世界的少女，那些有着所有人类缺点的少女，最普遍的少女；另外一类——她一个人，丝毫弱点都没有，而且超出全人类。</p></blockquote>
 
@@ -748,7 +748,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[Exercises For the Muscle]]></title>
     <link href="http://minejo.github.io/blog/2014/01/10/exercises-for-the-muscle/"/>
-    <updated>2014-01-10T22:32:00+08:00</updated>
+    <updated>2014-01-10T22:32:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/01/10/exercises-for-the-muscle</id>
     <content type="html"><![CDATA[<p>按照视频《8分钟给你6块腹肌》练了一周后，我发现效果真的好不错，而且睡觉还更香了，锻炼身体什么的果然有益啊。</p>
 
@@ -790,7 +790,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[2013年读过的一些不错的书]]></title>
     <link href="http://minejo.github.io/blog/2014/01/01/2013nian-du-shu-zong-jie/"/>
-    <updated>2014-01-01T00:44:00+08:00</updated>
+    <updated>2014-01-01T00:44:00+00:00</updated>
     <id>http://minejo.github.io/blog/2014/01/01/2013nian-du-shu-zong-jie</id>
     <content type="html"><![CDATA[<p>总的来说，自从6月7号买了kindle后，今年看的书比往年来说还是比较多的。哈哈，kindle还是物有所值的。但其实看书时间还是远远不够的，现在基本都是晚上在床上看1-2小时，但是每次都看到半夜，第二天效率不太高，所以2014年要更合理的安排读书时间，嗯！</p>
 
@@ -951,7 +951,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[《癌症楼》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2013/12/24/%3C%3Cyan-zheng-lou-%3E%3E-du-shu-bi-ji/"/>
-    <updated>2013-12-24T20:07:00+08:00</updated>
+    <updated>2013-12-24T20:07:00+00:00</updated>
     <id>http://minejo.github.io/blog/2013/12/24/<<yan-zheng-lou->>-du-shu-bi-ji</id>
     <content type="html"><![CDATA[<blockquote><p>“您？”只见他前额的皮肤往上一抬，仿佛准备祝酒似的。“您怎能知道，卓英卡，在地球的哪一个点上您会是幸福的，在哪一个点上您会是不幸的？这谁能说自己心中有数？”</p></blockquote>
 
@@ -1069,7 +1069,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[《黑客与画家》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2013/12/16/%3C%3Chei-ke-yu-hua-jia-%3E%3E-du-shu-bi-ji/"/>
-    <updated>2013-12-16T14:36:00+08:00</updated>
+    <updated>2013-12-16T14:36:00+00:00</updated>
     <id>http://minejo.github.io/blog/2013/12/16/<<hei-ke-yu-hua-jia->>-du-shu-bi-ji</id>
     <content type="html"><![CDATA[<blockquote><p>根据这六条“黑客伦理”，黑客价值观的核心原则可以概括成这样几点：分享、开放、民主、计算机的自由使用、进步。</p></blockquote>
 
@@ -1195,7 +1195,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[10000 hours 开源项目设计]]></title>
     <link href="http://minejo.github.io/blog/2013/11/25/10000-hours-kai-yuan-xiang-mu-she-ji/"/>
-    <updated>2013-11-25T17:32:00+08:00</updated>
+    <updated>2013-11-25T17:32:00+00:00</updated>
     <id>http://minejo.github.io/blog/2013/11/25/10000-hours-kai-yuan-xiang-mu-she-ji</id>
     <content type="html"><![CDATA[<p>前天偶然间逛知乎发现了彭莹的<a href="http://yingpeng.me/">blog</a>, 惊叹与她的10000 hour的计划和她超强的自律能力外，我了解了10000 hours of practice。</p>
 
@@ -1217,7 +1217,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[使用Gtick做吉他的节拍器]]></title>
     <link href="http://minejo.github.io/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi/"/>
-    <updated>2013-11-20T23:40:00+08:00</updated>
+    <updated>2013-11-20T23:40:00+00:00</updated>
     <id>http://minejo.github.io/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi</id>
     <content type="html"><![CDATA[<p>今天练和弦的时候突然发现节拍什么的真的不好掌握，忽快忽慢的，本来想买个现成的节拍器的，突然想起不就是打节拍吗？这么简单的功能专门买个节拍器有点不划算，于是我就是AUR中心找了下，找到了这个<code>gtick</code>,它的介绍是这样的：</p>
 
@@ -1234,7 +1234,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[《1Q84》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2013/10/13/%3C%3C1q84%3E%3E-du-shu-bi-ji/"/>
-    <updated>2013-10-13T21:31:00+08:00</updated>
+    <updated>2013-10-13T21:31:00+00:00</updated>
     <id>http://minejo.github.io/blog/2013/10/13/<<1q84>>-du-shu-bi-ji</id>
     <content type="html"><![CDATA[<blockquote><p>主观和客观，对于大多数人而言考虑时并不能明确的加以区别，如果这个界限本来就不明确的话，有意图地移动改变并不是一件多么困难的工作。</p></blockquote>
 
@@ -1344,7 +1344,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[《看见》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2013/10/13/%3C%3Ckan-jian-%3E%3E-du-shu-bi-ji/"/>
-    <updated>2013-10-13T21:28:00+08:00</updated>
+    <updated>2013-10-13T21:28:00+00:00</updated>
     <id>http://minejo.github.io/blog/2013/10/13/<<kan-jian->>-du-shu-bi-ji</id>
     <content type="html"><![CDATA[<blockquote><p>善良的人做“对抗性”采访，不会跃跃欲试地好斗，但当他决定看护真相的时候，是绝不撤步的对峙。</p></blockquote>
 
@@ -1490,7 +1490,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[《拧发条鸟年代记》读书笔记]]></title>
     <link href="http://minejo.github.io/blog/2013/10/12/%3C%3Cning-fa-tiao-niao-nian-dai-ji-%3E%3E-du-shu-bi-ji/"/>
-    <updated>2013-10-12T23:11:00+08:00</updated>
+    <updated>2013-10-12T23:11:00+00:00</updated>
     <id>http://minejo.github.io/blog/2013/10/12/<<ning-fa-tiao-niao-nian-dai-ji->>-du-shu-bi-ji</id>
     <content type="html"><![CDATA[<blockquote><p>&ldquo;既然你想辞，辞也未尝不可嘛，&#8221;她说，&#8221;那是你的人生，尽可随心所欲。&#8221;如此说罢，便只顾用筷子将鱼刺拨往盘边。</p></blockquote>
 
@@ -1608,7 +1608,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
   <entry>
     <title type="html"><![CDATA[self-introduce for interview]]></title>
     <link href="http://minejo.github.io/blog/2013/10/12/self-introduce-for-interview/"/>
-    <updated>2013-10-12T15:32:00+08:00</updated>
+    <updated>2013-10-12T15:32:00+00:00</updated>
     <id>http://minejo.github.io/blog/2013/10/12/self-introduce-for-interview</id>
     <content type="html"><![CDATA[<p>   Good morning, my name is Li Chao, it is really a great honor to have this opportunity for a interview. Now I will introduce myself briefly, I am 21 years old, born in jiangsu province. My major is communication engineering.</p>
 
