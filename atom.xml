@@ -4,7 +4,7 @@
   <title><![CDATA[Jonathan's Blog]]></title>
   <link href="http://minejo.github.io/atom.xml" rel="self"/>
   <link href="http://minejo.github.io/"/>
-  <updated>2014-05-17T00:29:10+00:00</updated>
+  <updated>2014-05-17T00:39:53+00:00</updated>
   <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[jonathan]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[《围城》读书笔记]]></title>
+    <link href="http://minejo.github.io/blog/2014/05/17/fortress-besieged/"/>
+    <updated>2014-05-17T00:37:11+00:00</updated>
+    <id>http://minejo.github.io/blog/2014/05/17/fortress-besieged</id>
+    <content type="html"><![CDATA[<blockquote><p>这一张文凭，仿佛有 亚当、夏娃下身那片树叶的功用，可以遮羞包丑；小小一方纸能把一个人的空疏 、寡陋、愚笨都掩盖起来。</p></blockquote>
+
+<p>-At Kindle page:149-151</p>
+
+<hr />
+
+<blockquote><p>又如前天的日记写他叫鸿渐到周家去辞行，鸿渐不肯，骂 周太太鄙吝势利，他怎样教训儿子“君子躬自厚而薄责于人，亲无失亲，故无失 故”，结果儿子怎样帖然“无词”。其实鸿渐并没骂周太太。是豚翁自己对她不 满意，所以用这种皮里阳秋的笔法来褒贬。鸿</p></blockquote>
+
+<p>-At Kindle page:1677-1680</p>
+
+<hr />
+
+<blockquote><p>他想也许女孩子第一次有男朋友的心境也像白水冲了红酒，说 不上爱情，只是一种温淡的兴奋。</p></blockquote>
+
+<p>-At Kindle page:1922-1923</p>
+
+<hr />
+
+<!-- more -->
+
+
+<blockquote><p>每逢它不肯走，汽车夫就破口臭 骂，此刻骂得更利害了。骂来骂去，只有一个意思：汽车夫愿意跟汽车的母亲和 祖母发生肉体恋爱。骂的话虽然欠缺变化，骂的力气愈来愈足。</p></blockquote>
+
+<p>-At Kindle page:1958-1960</p>
+
+<hr />
+
+<blockquote><p>辛楣很喜欢那个女孩子，这一望而知的 ，但是好像并非热烈的爱，否则，他讲她的语气，不会那样幽默。他对她也许不 过像自己对柔嘉，可见结婚无需太伟大的爱情，彼此不讨厌已经够结婚资本了。</p></blockquote>
+
+<p>-At Kindle page:3712-3714</p>
+
+<hr />
+
+<blockquote><p>这好像开无线电。你把针在面上转一圈，听见东一个电台半句京戏，西一个电台 半句报告，忽然又是半句外国歌啦，半句昆曲啦，鸡零狗碎，凑在一起，莫名其 妙。可是每一个破碎的片段，在它本电台广播的节目里，有上文下文并非胡闹。 你只要认定一个电台听下去，就了解它的意义。</p></blockquote>
+
+<p>-At Kindle page:3915-3917</p>
+
+<hr />
+
+<blockquote><p>他入世多年，明白在一切机关里，人总有人可替，坐位总有人来坐。怄气辞职只是辞的人吃亏，被辞的职位漠然不痛不痒；人不肯坐椅子，苦了自己的腿，椅子空着不会饿，椅子立着不会酸的。不过椅子空得多些，可以造成不景气的印象。</p></blockquote>
+
+<p>-At Kindle page:4547-4549</p>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[《遇见未知的自己》读书笔记]]></title>
@@ -1602,34 +1654,6 @@ $ sudo chmod 0755 /usr/local/bin/ack
 <p>-奇鸟行状录, loc. 8307-8309</p>
 
 <hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[self-introduce for interview]]></title>
-    <link href="http://minejo.github.io/blog/2013/10/12/self-introduce-for-interview/"/>
-    <updated>2013-10-12T15:32:00+00:00</updated>
-    <id>http://minejo.github.io/blog/2013/10/12/self-introduce-for-interview</id>
-    <content type="html"><![CDATA[<p>   Good morning, my name is Li Chao, it is really a great honor to have this opportunity for a interview. Now I will introduce myself briefly, I am 21 years old, born in jiangsu province. My major is communication engineering.</p>
-
-<p>   During the school, I have obtained a second-class scholarship three times and merit student and outstanding members and other honorary titles.</p>
-
-<p> 　I am a positive man. In the past three years, I learned java, C#, Linux by myself and recommended myself to the INTERNET CENTER studio in our school for development work. Now I have been the team leader of the studio. Also, being the class monitor for about 2 years improves my leadership skills. By the way, I have passed CET4/6 and NCRE-2 Java.</p>
-
-<p> 　When it comes to working experience, I have done many science research projects. Some projects are from my studio, others are from Student Research Training Program.</p>
-
-<p>   Among studio projects, one is to use Discuz open-source framework to develop the BBS of our school. Another is to develop a VPS integrated management system using .NET and SQLSERVER.</p>
-
-<!-- more -->
-
-
-<p>　 Among SRTP projects, I leader two projects.one is developing an android app, which is used to stream media freely when the phone connects to the School Wireless Network.</p>
-
-<p>　 Another is developing a website, which is used to manage grade and information of our college students.</p>
-
-<p> 　Among all those projects, most importantly, I have learned how to learn a new technology quickly.</p>
-
-<p> 　In addition to this, I love reading and playing basketball and biking. My favourite writer is Murakami.</p>
 ]]></content>
   </entry>
   
