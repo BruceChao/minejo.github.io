@@ -3,7 +3,7 @@ layout: post
 title: "《围城》读书笔记"
 date: 2014-05-17 00:37:11 +0000
 comments: true
-categories: 
+categories: reading
 ---
 
 
